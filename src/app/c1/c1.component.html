@@ -1,0 +1,30 @@
+<h1 class="title">PET SHOP</h1>
+
+<div class="container">
+    <p>Filtrar por animal:</p>
+    <select (change)="filtroAnimal($event)">
+      <option value="">Mostrar todos</option>
+      <option value="Perro">Perro</option>
+      <option value="Gato">Gato</option>
+      <option value="Conejo">Conejo</option>
+      <option value="Hamster">Hamster</option>
+    </select>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Animal</th>
+          <th>Accesorios</th>
+          <th>Precios</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let animal of animalesFiltrados">
+          <td>{{ animal.nombAnimal }}</td>
+          <td>{{ animal.accesorio }}</td>
+          <td>{{ animal.precio }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
